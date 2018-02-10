@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="namecard" size="0.268000 0.160800" />
+    <ImageTarget name="0324" size="0.057000 0.057000" />
+    <ImageTarget name="HiroPattern" size="0.800000 0.797695" />
+    <ImageTarget name="stones" size="0.247000 0.172900" />
+    <ImageTarget name="1610" size="0.080000 0.080000" />
+    <ImageTarget name="0001000" size="0.100000 0.100000" />
+  </Tracking>
+</QCARConfig>
