@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/VuforiaExample.iml" filepath="$PROJECT_DIR$/VuforiaExample.iml" />
+      <module fileurl="file://D:\Studia\aplikacje_git\vuforia_project\VuforiaExample.iml" filepath="D:\Studia\aplikacje_git\vuforia_project\VuforiaExample.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://D:\Studia\aplikacje_git\vuforia_project\app\app.iml" filepath="D:\Studia\aplikacje_git\vuforia_project\app\app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/vuforia_project.iml" filepath="$PROJECT_DIR$/.idea/vuforia_project.iml" />
     </modules>
   </component>
 </project>

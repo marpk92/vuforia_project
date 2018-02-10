@@ -54,6 +54,8 @@ import com.mgr.arapp.vuforiaexample.ui.SampleAppMenu.SampleAppMenuInterface;
 import java.util.ArrayList;
 import java.util.Vector;
 
+import static com.vuforia.HINT.HINT_MAX_SIMULTANEOUS_IMAGE_TARGETS;
+
 
 public class ImageTargets extends Activity implements SampleApplicationControl,
     SampleAppMenuInterface
@@ -563,6 +565,7 @@ public class ImageTargets extends Activity implements SampleApplicationControl,
         {
             Log.i(LOGTAG, "Tracker successfully initialized");
         }
+        Vuforia.setHint(HINT_MAX_SIMULTANEOUS_IMAGE_TARGETS, 5);
         return result;
     }
     

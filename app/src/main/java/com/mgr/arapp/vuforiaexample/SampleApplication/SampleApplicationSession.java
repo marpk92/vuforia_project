@@ -373,7 +373,7 @@ public class SampleApplicationSession implements UpdateCallbackInterface
                         "5fIcMEOEZ6t61YqGBvsE0s7vHWNVeA4XZ/c/3+A2dUHJH+YXiMv/Rau8o+LqvDflgWBuro231uF0N41h9HMb5NQQ2l8l3xSRX/DUd6c0ZMx5+MHnBAOm" +
                         "W9GE50z3DbeBhiQAzuTr8lfi4U2n5Ene9DWeW1ePUWuwsSLpUu8o1n8keCNAsy4QCX5zp4kP9umhXh6pF7SgfVlLFjZ5J/NjfBovyVDe4N2YP7McMpPGbe" +
                         "LpKSlrdZKAQJ2Ck9UyLYA+2BHFyjxZ7s6DMUqchUehkIJhV4ushjnlUExc22snbrvMStD6wTxp9S14");
-                
+
                 do
                 {
                     // Vuforia.init() blocks until an initialization step is
