@@ -26,7 +26,7 @@ import com.mgr.arapp.vuforiaexample.R;
 public class ActivityLauncher extends ListActivity
 {
     
-    private String mActivities[] = {"Jeden marker"};
+    private String mActivities[] = {"Jeden marker", "Obiekty 3D"};
     
     
     @Override
@@ -60,9 +60,9 @@ public class ActivityLauncher extends ListActivity
                 intent.putExtra("ABOUT_TEXT", "ImageTargets/IT_about.html");
                 break;
             case 1:
-//                intent.putExtra("ACTIVITY_TO_LAUNCH",
-//                        "app.VuMark.VuMark");
-//                intent.putExtra("ABOUT_TEXT", "VuMark/VM_about.html");
+                intent.putExtra("ACTIVITY_TO_LAUNCH",
+                        "libgdx.ArActivity");
+                intent.putExtra("ABOUT_TEXT", "ImageTargets/IT_about.html");
                 break;
             case 2:
 //                intent.putExtra("ACTIVITY_TO_LAUNCH",

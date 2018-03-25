@@ -94,6 +94,33 @@ public class SampleAppRenderer {
         device.setMode(deviceMode); // Select if we will be in AR or VR mode
     }
 
+    public SampleAppRenderer(Activity activity, int deviceMode,
+                             boolean stereo, float nearPlane, float farPlane)
+    {
+        mActivity = activity;
+
+//        mRenderingInterface = renderingInterface;
+        mRenderer = Renderer.getInstance();
+
+        if(farPlane < nearPlane)
+        {
+            Log.e(LOGTAG, "Far plane should be greater than near plane");
+            throw new IllegalArgumentException();
+        }
+
+        setNearFarPlanes(nearPlane, farPlane);
+
+        if(deviceMode != Device.MODE.MODE_AR && deviceMode != Device.MODE.MODE_VR)
+        {
+            Log.e(LOGTAG, "Device mode should be Device.MODE.MODE_AR or Device.MODE.MODE_VR");
+            throw new IllegalArgumentException();
+        }
+
+        Device device = Device.getInstance();
+        device.setViewerActive(stereo); // Indicates if the app will be using a viewer, stereo mode and initializes the rendering primitives
+        device.setMode(deviceMode); // Select if we will be in AR or VR mode
+    }
+
     public void onSurfaceCreated()
     {
         initRendering();
@@ -110,7 +137,7 @@ public class SampleAppRenderer {
         mRenderingPrimitives = Device.getInstance().getRenderingPrimitives();
     }
 
-    void initRendering()
+    public void initRendering()
     {
         vbShaderProgramID = SampleUtils.createProgramFromShaderSrc(VideoBackgroundShader.VB_VERTEX_SHADER,
                 VideoBackgroundShader.VB_FRAGMENT_SHADER);
@@ -218,11 +245,17 @@ public class SampleAppRenderer {
         mFarPlane = far;
     }
 
-    public void renderVideoBackground()
+    public void renderVideoBackground(){
+        renderVideoBackground(false);
+    }
+
+    public void renderVideoBackground(boolean createPrimitives)
     {
         if(currentView == VIEW.VIEW_POSTPROCESS)
             return;
-
+        if(createPrimitives){
+            mRenderingPrimitives = Device.getInstance().getRenderingPrimitives();
+        }
         int vbVideoTextureUnit = 0;
         // Bind the video bg texture and get the Texture ID from Vuforia
         videoBackgroundTex.setTextureUnit(vbVideoTextureUnit);
