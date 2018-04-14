@@ -87,6 +87,8 @@ public class VuforiaRenderer {
 
         // did we find any trackables this frame?
         TrackableResult[] results = new TrackableResult[state.getNumTrackableResults()];
+        Log.d(LOGTAG, "*********REsults:" + results.length);
+
         for (int tIdx = 0; tIdx < state.getNumTrackableResults(); tIdx++)
         {
             //remember trackable

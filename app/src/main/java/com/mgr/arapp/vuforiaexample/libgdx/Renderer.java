@@ -1,5 +1,7 @@
 package com.mgr.arapp.vuforiaexample.libgdx;
 
+import android.util.Log;
+
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
@@ -82,6 +84,9 @@ public class Renderer {
     private void setProjectionAndCamera(Display contentProvider, TrackableResult[] trackables, float filedOfView) {
 
         ModelInstance model = contentProvider.modelInstance;
+        if(trackables != null) {
+            Log.d("REnderer", "*****Trackables: " + trackables.length);
+        }
 
         if (trackables != null && trackables.length > 0) {
             //transform all content

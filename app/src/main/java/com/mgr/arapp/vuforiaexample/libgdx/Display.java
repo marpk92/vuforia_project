@@ -21,10 +21,10 @@ public class Display implements Screen {
         mRenderer = new Renderer(vuforiaRenderer);
 
         AssetManager assets = new AssetManager();
-        assets.load("models3d/jet.g3db", Model.class);
+        assets.load("models3d/box.g3db", Model.class);
         assets.finishLoading();
 
-        model = assets.get("models3d/jet.g3db", Model.class);
+        model = assets.get("models3d/box.g3db", Model.class);
 
         modelInstance = new ModelInstance(model);
 
